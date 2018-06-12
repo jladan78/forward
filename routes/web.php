@@ -55,9 +55,9 @@ Route::group(['middleware'=>['auth']],function(){
         Route::put('/hwbTracker/update', 'HwbTrackerController@update');
         Route::delete('/hwbTracker/{id}', 'HwbTrackerController@destroy');
         // Route::put('/mbrp_questionnaire/delete', 'HwbTrackerController@delete');
-        Route::get('/mbrp_parameter/selectParameter', 'mbrp_parameterController@selectParameter');
+        Route::get('/mbrp_parameter/selectParameter', 'Mbrp_parameterController@selectParameter');
 
-        Route::get('/mbrp_programme/selectProgrammes', 'mbrp_programmeController@selectProgrammes');
+        Route::get('/mbrp_programme/selectProgrammes', 'Mbrp_programmeController@selectProgrammes');
    
         Route::get('/mbrp_questionnaire', 'Mbrp_questionnaireController@index');
         Route::post('/mbrp_questionnaire/register', 'Mbrp_questionnaireController@store');
@@ -82,14 +82,14 @@ Route::group(['middleware'=>['auth']],function(){
         Route::delete('/hwbTracker/{id}', 'HwbTrackerController@destroy');
         // Route::put('/mbrp_questionnaire/delete', 'HwbTrackerController@delete');
 
-        Route::get('/mbrp_parameter', 'mbrp_parameterController@index');
-        Route::post('/mbrp_parameter/register', 'mbrp_parameterController@store');
-        Route::put('/mbrp_parameter/update', 'mbrp_parameterController@update');
-        Route::put('/mbrp_parameter/desactivar', 'mbrp_parameterController@desactivar');
-        Route::put('/mbrp_parameter/activar', 'mbrp_parameterController@activar');
-        Route::get('/mbrp_parameter/selectParameter', 'mbrp_parameterController@selectParameter');
+        Route::get('/mbrp_parameter', 'Mbrp_parameterController@index');
+        Route::post('/mbrp_parameter/register', 'Mbrp_parameterController@store');
+        Route::put('/mbrp_parameter/update', 'Mbrp_parameterController@update');
+        Route::put('/mbrp_parameter/desactivar', 'Mbrp_parameterController@desactivar');
+        Route::put('/mbrp_parameter/activar', 'Mbrp_parameterController@activar');
+        Route::get('/mbrp_parameter/selectParameter', 'Mbrp_parameterController@selectParameter');
 
-        Route::get('/mbrp_programme/selectProgrammes', 'mbrp_programmeController@selectProgrammes');
+        Route::get('/mbrp_programme/selectProgrammes', 'Mbrp_programmeController@selectProgrammes');
    
         Route::get('/mbrp_questionnaire', 'Mbrp_questionnaireController@index');
         Route::post('/mbrp_questionnaire/register', 'Mbrp_questionnaireController@store');

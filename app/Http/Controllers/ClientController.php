@@ -59,7 +59,7 @@ class ClientController extends Controller
         ->orWhere('persons.id_document', 'like', '%'. $filtro . '%')
         ->orWhere('persons.last_name', 'like', '%'. $filtro . '%')
         ->orWhere('clients.initials', 'like', '%'. $filtro . '%')
-        ->select('Clients.id','clients.reference','clients.initials', 'clients.dob')
+        ->select('clients.id','clients.reference','clients.initials', 'clients.dob')
         ->orderBy('clients.reference', 'asc')->get();
 
         return ['clients' => $clients];
