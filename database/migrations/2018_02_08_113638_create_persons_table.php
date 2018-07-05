@@ -23,7 +23,6 @@ class CreatePersonsTable extends Migration
             $table->string('email', 100)->nullable();
             $table->timestamps();
         });
-        DB::table('persons')->insert(array('id'=>'1','first_name'=>'admin', 'last_name'=>'admin'));
     }
 
     /**

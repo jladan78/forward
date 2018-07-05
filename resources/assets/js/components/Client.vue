@@ -107,9 +107,136 @@
                     <el-tabs type="border-card">
                     <el-tab-pane style="min-height: 300px;">
                         <span slot="label"><i class="el-icon-date"></i> About</span>
-                        About
+                        
+<div class="row">
+    <div class="col-sm-6 col-md-3 col-lg-2">
+        <div class="card">
+            <div class="card-body">
+              
+                <h6 class="card-title"> Reference:</h6>
+                <div class="text-value text-right">{{this.clientForm.reference}}</div>
+                <!-- <div class="card-text">
+                    <h4>{{this.clientForm.reference}}</h4>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-5 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">  Reference:</h3>
+                <div class="card-text text-right">
+                   <h4>{{this.clientForm.reference}}</h4> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title"></h3>
+                <div class="card-text">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title"></h3>
+                <div class="card-text">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Address</h6>
+               
+                    <div class="text-value"> Address: <div class="text-value text-right">{{this.clientForm.address}}</div> </div>
+                    <div class="text-value"> Email: </div><div class="text-value  text-right">{{this.clientForm.email}}</div>
+                    <div class="text-value"> Phone: </div><div class="text-value text-right">{{this.clientForm.phone}}</div>
+              
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">The title</h3>
+                <div class="card-text">
+                    The text
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-md-3">
+    <div class="card text-white bg-info">
+        <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+            <i class="icon-people"></i>
+        </div>
+        <div class="text-value">87.500</div>
+        <small class="text-muted text-uppercase font-weight-bold">Visitors</small>
+        <div class="progress progress-white progress-xs mt-3">
+            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!--/.col-->
+    <div class="col-sm-6 col-md-3">
+        <div class="card">
+            <div class="card-body">
+            <div class="text-value">89.9%</div>
+            <div>Lorem ipsum...</div>
+            <div class="progress progress-xs my-2">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <small class="text-muted">Lorem ipsum dolor sit amet enim.</small>
+            </div>
+        </div>
+    </div>
+
+    <!--/.col-->
+    <div class="col-sm-6 col-md-3">
+        <div class="card">
+            <div class="card-body text-center">
+            <div class="text-muted small text-uppercase font-weight-bold">Title</div>
+            <div class="text-value-lg py-3">1,123</div>
+            <div class="chart-wrapper mx-auto" style="height:40px;width:80px">
+                <canvas id="sparkline-chart-1" class="chart chart-bar" height="40" width="80"></canvas>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--/.col-->
+    <div class="col-sm-6 col-md-3">
+        <div class="card">
+            <div class="card-body p-3 d-flex align-items-center">
+            <i class="fa fa-cogs bg-primary p-3 font-2xl mr-3"></i>
+            <div>
+                <div class="text-value-sm text-primary">$1.999,50</div>
+                <div class="text-muted text-uppercase font-weight-bold small">Income</div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -->
+
                     </el-tab-pane>
-                    <el-tab-pane label="MBRP Questionnaires" name='MB' style="min-height: 300px;">
+                    <el-tab-pane label="MBRP Questionnaires" name='MB' style="min-height: 500px;">
                         <mbrp_quest_cli
                             :mbrp_cli_id ="this.person_id"
                         >
@@ -494,6 +621,11 @@
                 this.clientForm.initials=data['initials'];
                 this.clientForm.dob=data['dob'];
                 this.clientForm.id_document=data['id_document'];
+                this.clientForm.address=data['address'];
+                this.clientForm.email=data['email'];
+                this.clientForm.phone=data['phone'];
+                this.clientForm.contact=data['contact'];
+                this.clientForm.contact_phone=data['contact_phone'];
 
 
             },
@@ -506,6 +638,12 @@
                 this.clientForm.initials='';
                 this.clientForm.dob='';
                 this.clientForm.id_document='';
+                 this.clientForm.address='';
+                this.clientForm.email='';
+                this.clientForm.phone='';
+                this.clientForm.contact='';
+                this.clientForm.contact_phone='';
+
 
                 this.listClient(1,'','first_name');
             },

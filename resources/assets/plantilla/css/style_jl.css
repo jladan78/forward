@@ -1,0 +1,27 @@
+  .app-header.navbar .navbar-brand {
+		display: inline-block;
+		width: 155px;
+		height: 55px;
+		padding: 0.5rem 1rem;
+		margin-right: 0;
+		background-color: #fff;
+		background-image: url("../img/logo.png");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 140px auto;
+		border-bottom: 1px solid #c2cfd6; 
+	} 
+ .logo-brand {
+      display: inline-block;
+      width: 300px;
+      height: 90px;
+      padding: 0.5rem 1rem;
+      margin-right: 0;
+      /* background-color: #fff; */
+      background-image: url("../img/logo.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 270px auto;
+      /* border-bottom: 1px solid #c2cfd6;  */
+    } 
+

@@ -15,28 +15,37 @@
     <link href="css/plantilla.css" rel="stylesheet">
 </head>
 
-<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden" >
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">    
     <div id="app">
 
     <header class="app-header navbar">
-        <button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">
+        <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">    
           <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-<!--          <ul class="nav navbar-nav d-md-down-none">
-            <li class="nav-item px-3">
-                <a class="nav-link" href="#">Escritorio</a>
-            </li>
-            <li class="nav-item px-3">
-                <a class="nav-link" href="#">Configuraciones</a>
-            </li>
-        </ul> 
- -->
+<!--       <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="img/logo.png" width="155" height="55" alt="Forward Logo">
+        <img class="navbar-brand-minimized" src="img/favicon.png" width="30" height="30" alt="Forward Logo">
+      </a> -->
+      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Users</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Settings</a>
+        </li>
+      </ul>
+
         <ul class="nav navbar-nav ml-auto">
-            <!-- <li class="nav-item d-md-down-none">
+            <!--
+                <li class="nav-item d-md-down-none">
                 <a class="nav-link" href="#" data-toggle="dropdown">
                     <i class="icon-bell"></i>
                     <span class="badge badge-pill badge-danger">5</span>
@@ -54,7 +63,8 @@
                         <span class="badge badge-danger">2</span>
                     </a>
                 </div>
-            </li> -->
+            </li> 
+            -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <img src="img/avatars/9.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
@@ -62,11 +72,11 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <div class="dropdown-header text-center">
-                        <strong>Cuenta</strong>
+                        <strong>Account</strong>
                     </div>
                     <a class="dropdown-item" href="{{ route('logout') }}" 
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    <i class="fa fa-lock"></i> Cerrar sesión</a>
+                    <i class="fa fa-lock"></i> Logout </a>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
@@ -96,8 +106,8 @@
     </div>   
     </div>
     <footer class="app-footer">
-        <span><a href="#">JLADAN</a> &copy; 2017</span>
-        <span class="ml-auto">Desarrollado por <a href="#">JLADAN</a></span>
+        <span><a href="#">JLADAN</a> &copy; 2018</span>
+        <!-- <span class="ml-auto">Developed by <a href="#">JLADAN</a></span> -->
     </footer>
     
 

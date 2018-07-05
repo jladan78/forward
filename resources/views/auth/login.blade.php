@@ -10,16 +10,37 @@
               <div class="card-body">
               <h1>Login</h1>
               <p class="text-muted">Sign In to your account</p>
-              <div class="form-group mb-3{{$errors->has('usuario' ? 'is-invalid' : '')}}">
+              <!-- <div class="form-group mb-3{{$errors->has('usuario' ? 'is-invalid' : '')}}">
                 <span class="input-group-addon"><i class="icon-user"></i></span>
                 <input type="text" value="{{old('usuario')}}" name="usuario" id="usuario" class="form-control" placeholder="User">
                 {!!$errors->first('usuario','<span class="invalid-feedback">:message</span>')!!}
+              </div> -->
+              <div class="input-group mb-3{{$errors->has('usuario' ? 'is-invalid' : '')}}">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="icon-user"></i>
+                    </span>
+                  </div>
+                  <input type="text" value="{{old('usuario')}}" name="usuario" id="usuario" class="form-control" placeholder="User">
+                   {!!$errors->first('usuario','<span class="invalid-feedback">:message</span>')!!}
               </div>
-              <div class="form-group mb-4{{$errors->has('password' ? 'is-invalid' : '')}}">
+
+              <!-- <div class="form-group mb-4{{$errors->has('password' ? 'is-invalid' : '')}}">
                 <span class="input-group-addon"><i class="icon-lock"></i></span>
                 <input type="password" name="password" id="password" class="form-control" placeholder="Password">
                 {!!$errors->first('password','<span class="invalid-feedback">:message</span>')!!}
+              </div> -->
+
+              <div class="input-group mb-4{{$errors->has('password' ? 'is-invalid' : '')}}">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="icon-lock"></i>
+                    </span>
+                  </div>
+                  <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                  {!!$errors->first('password','<span class="invalid-feedback">:message</span>')!!}
               </div>
+
               <div class="row">
                 <div class="col-6">
                   <button type="submit" class="btn btn-primary px-4">Log in</button>

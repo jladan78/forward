@@ -95,23 +95,23 @@
                         <div class="modal-body">
                             <el-form :model="userForm" :rules="rules" ref="userForm" size="small"  label-width="120px" label-position="right" class="classUserForm">
                             
-                                        <el-form-item label="First name: " prop="first_name" style="margin-bottom:0px;">
+                                        <el-form-item label="First name: " prop="first_name" style="margin-bottom:15px;">
                                             <el-input v-model="userForm.first_name"></el-input>
                                         </el-form-item>
                                         
-                                        <el-form-item label="Last name: " prop="last_name" class="wmb" style="margin-bottom:0px;">
+                                        <el-form-item label="Last name: " prop="last_name" class="wmb" style="margin-bottom:15px;">
                                             <el-input v-model="userForm.last_name"></el-input>
                                         </el-form-item>
                                         
-                                        <el-form-item label="Address: " prop="address" style="margin-bottom:0px;">
+                                        <el-form-item label="Address: " prop="address" style="margin-bottom:15px;">
                                             <el-input v-model="userForm.address"></el-input>
                                         </el-form-item>
 
-                                        <el-form-item label="Phone " prop="phone"  style="margin-bottom:0px;">
+                                        <el-form-item label="Phone " prop="phone"  style="margin-bottom:15px;">
                                             <el-input v-model="userForm.phone"></el-input>
                                         </el-form-item>
                                     
-                                        <el-form-item label="Email " prop="email"  style="margin-bottom:0px;">
+                                        <el-form-item label="Email " prop="email"  style="margin-bottom:15px;">
                                             <el-input v-model="userForm.email"></el-input>
                                         </el-form-item>
                                     
@@ -123,7 +123,7 @@
                                             </el-select>
                                         </el-form-item> 
                                     
-                                        <el-form-item label="User: " prop="usuario" style="margin-bottom:0px;">
+                                        <el-form-item label="User: " prop="usuario" style="margin-bottom:15px;">
                                             <el-input v-model="userForm.usuario"></el-input>
                                         </el-form-item>
                                     

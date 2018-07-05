@@ -28,71 +28,75 @@
                             </div>
                         </div> 
 -->
-
-                            <div class="card-deck">
+                        <!-- <div class="card-deck">  -->
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
                                 <div class="card">
-                                <div class="card-header">
-	                                Health & well-Being tracker
-                                </div>
-                                <div class="card-body">                               
-                                    <el-table
-                                        ref="hwbtrackersTable"
-                                        :data="arrayHwbTracker"
-                                        :default-sort = "{prop: 'client_id', order: 'descending'}"
-                                        style="width: 100%"  class="table table-responsive-sm table-sm"
-                                         @selection-change="seleccionDatos">
-                                        <el-table-column label="Ops."  fixed="right" width="90">
-                                            <template slot-scope="props">
-                                                <!-- <button type="button" class="btn btn-warning btn-sm" @click="abrirModal('hwbTracker','update',props.row)" > -->
-                                                <button type="button" class="btn btn-warning btn-sm"  @click="mostrarDetalle('update',props.row)">    
-                                                    <i class="icon-pencil"></i>
-                                                </button> 
-                                                <button type="button" class="btn btn-danger btn-sm" @click="deleteHwbTracker(props.row.id)">
-                                                    <i class="icon-trash"></i>
-                                                </button>
-                                            </template>
-                                        </el-table-column>
-                                        <el-table-column   type="selection" width="40">
-                                        </el-table-column>
-                                        <el-table-column type="expand" width="35">
-                                            <template slot-scope="props">
+                                    <div class="card-header">
+                                        Health & well-Being tracker
+                                    </div>
+                                    <div class="card-body">                               
+                                        <el-table
+                                            ref="hwbtrackersTable"
+                                            :data="arrayHwbTracker"
+                                            :default-sort = "{prop: 'client_id', order: 'descending'}"
+                                            style="width: 100%"  class="table table-responsive-sm table-sm"
+                                            @selection-change="seleccionDatos">
+                                            <el-table-column label="Ops."  fixed="right" width="90">
+                                                <template slot-scope="props">
+                                                    <!-- <button type="button" class="btn btn-warning btn-sm" @click="abrirModal('hwbTracker','update',props.row)" > -->
+                                                    <button type="button" class="btn btn-warning btn-sm"  @click="mostrarDetalle('update',props.row)">    
+                                                        <i class="icon-pencil"></i>
+                                                    </button> 
+                                                    <button type="button" class="btn btn-danger btn-sm" @click="deleteHwbTracker(props.row.id)">
+                                                        <i class="icon-trash"></i>
+                                                    </button>
+                                                </template>
+                                            </el-table-column>
+                                            <el-table-column   type="selection" width="40">
+                                            </el-table-column>
+                                            <el-table-column type="expand" width="35">
+                                                <template slot-scope="props">
 
-                                                <p>Social Network notes: {{ props.row.sn_notes }}</p>
-                                            </template>
-                                        </el-table-column>
-                                        <!-- <el-table-column label="Client Ref." prop="client.reference" sortable ></el-table-column> -->
-                                        <el-table-column label="Date" prop="date_track"  :formatter="formatter_date" width="95" sortable>     </el-table-column> 
-                                        <el-table-column label="Description"       prop="description" width="190" show-overflow-tooltip>     </el-table-column>
-<!--                                    
-                                        <el-table-column label="S.N."   prop="sn_value" sortable >     </el-table-column>
-                                        <el-table-column label="PCLS."   prop="pcls_value" sortable >     </el-table-column>
-                                        <el-table-column label="EMP"   prop="emp_value" sortable >     </el-table-column>
-                                        <el-table-column label="NPS"   prop="nps_value" sortable >     </el-table-column>
-                                        <el-table-column label="IPS."   prop="ips_value" sortable >     </el-table-column>
-                                        <el-table-column label="SMK."   prop="smk_value" sortable >     </el-table-column>
-                                        <el-table-column label="SH."   prop="sh_value" sortable >     </el-table-column>
-                                        <el-table-column label="PH."   prop="ph_value" sortable >     </el-table-column>
-                                        <el-table-column label="MH."   prop="mh_value" sortable >     </el-table-column>
-                                        <el-table-column label="DAU."   prop="dau_value" sortable >     </el-table-column>
--->
-                                    </el-table>
+                                                    <p>Social Network notes: {{ props.row.sn_notes }}</p>
+                                                </template>
+                                            </el-table-column>
+                                            <!-- <el-table-column label="Client Ref." prop="client.reference" sortable ></el-table-column> -->
+                                            <el-table-column label="Date" prop="date_track"  :formatter="formatter_date" width="95" sortable>     </el-table-column> 
+                                            <el-table-column label="Description"       prop="description" width="190" show-overflow-tooltip>     </el-table-column>
+    <!--                                    
+                                            <el-table-column label="S.N."   prop="sn_value" sortable >     </el-table-column>
+                                            <el-table-column label="PCLS."   prop="pcls_value" sortable >     </el-table-column>
+                                            <el-table-column label="EMP"   prop="emp_value" sortable >     </el-table-column>
+                                            <el-table-column label="NPS"   prop="nps_value" sortable >     </el-table-column>
+                                            <el-table-column label="IPS."   prop="ips_value" sortable >     </el-table-column>
+                                            <el-table-column label="SMK."   prop="smk_value" sortable >     </el-table-column>
+                                            <el-table-column label="SH."   prop="sh_value" sortable >     </el-table-column>
+                                            <el-table-column label="PH."   prop="ph_value" sortable >     </el-table-column>
+                                            <el-table-column label="MH."   prop="mh_value" sortable >     </el-table-column>
+                                            <el-table-column label="DAU."   prop="dau_value" sortable >     </el-table-column>
+    -->
+                                        </el-table>
 
-                                    <nav>
-                                        <ul class="pagination">
-                                            <li class="page-item" v-if="pagination.current_page > 1">
-                                                <a class="page-link" href="#" @click.prevent="cambiarPagina(pagination.current_page - 1,buscar,criterio)">Ant</a>
-                                            </li>
-                                            <li class="page-item" v-for="page in pagesNumber" :key="page" :class="[page == isActived ? 'active' : '']">
-                                                <a class="page-link" href="#" @click.prevent="cambiarPagina(page,buscar,criterio)" v-text="page"></a>
-                                            </li>
-                                            <li class="page-item" v-if="pagination.current_page < pagination.last_page">
-                                                <a class="page-link" href="#" @click.prevent="cambiarPagina(pagination.current_page + 1,buscar,criterio)">Sig</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
+                                        <nav>
+                                            <ul class="pagination">
+                                                <li class="page-item" v-if="pagination.current_page > 1">
+                                                    <a class="page-link" href="#" @click.prevent="cambiarPagina(pagination.current_page - 1,buscar,criterio)">Ant</a>
+                                                </li>
+                                                <li class="page-item" v-for="page in pagesNumber" :key="page" :class="[page == isActived ? 'active' : '']">
+                                                    <a class="page-link" href="#" @click.prevent="cambiarPagina(page,buscar,criterio)" v-text="page"></a>
+                                                </li>
+                                                <li class="page-item" v-if="pagination.current_page < pagination.last_page">
+                                                    <a class="page-link" href="#" @click.prevent="cambiarPagina(pagination.current_page + 1,buscar,criterio)">Sig</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
                                 </div>
-                                </div>
-                              <div class="card" style="width: 480px;"> 
+                            </div>
+     
+                            <div class="col-sm-12 col-md-6">    
+                                <div class="card"> 
                                     <div class="card-header">
 	                                     Health & well-Being Star
                                     </div>
@@ -103,21 +107,11 @@
                                         
                                     </div> 
                                 </div> 
-                                <!-- <el-card class="box-card" style="width: 480px;">
-                                      <radar-example
-                                            :chart-data="datacollection">
-                                        </radar-example>
-                                </el-card> -->
-                                <!-- <div class="card">
-    
-                                    <radar-example/> 
-                                </div> -->
-
-
                             </div>
-                    </div>
+                        </div>
+                     </div> 
                 </div>
-                <!-- Tabla Listado -->
+            
             </div>
         </template>
             <!-- Editar Cuestionario   -->

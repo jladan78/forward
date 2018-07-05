@@ -167,11 +167,11 @@
                                     <div class="form-group">
                                         <label>Is Completed </label><br>
                                         &nbsp;&nbsp;&nbsp;
-                                        <label class="switch switch-lg switch-icon switch-primary ">
+                                        <label class="switch switch-lg switch-label switch-primary ">
                                             <input type="checkbox" v-model="is_completed" class="switch-input " checked>
-                                            <span class="switch-label" data-on="Yes" data-off="No"></span>
-                                            <span class="switch-handle"></span>
+                                            <span class="switch-slider" data-checked="Yes" data-unchecked="No"></span>
                                         </label> 
+
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -430,10 +430,14 @@
                                         <div class="form-group sw">
                                             <label>Is Completed </label><br>
                                             &nbsp;&nbsp;&nbsp;
-                                            <label class="switch switch-lg switch-icon switch-primary ">
+                                            <!-- <label class="switch switch-lg switch-icon switch-primary ">
                                                 <input type="checkbox" v-model="is_completed" class="switch-input " checked>
-                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
-                                                <span class="switch-handle"></span>
+                                                <span class="switch-slider" data-on="Yes" data-off="No"></span>    
+                                            </label>  -->
+
+                                            <label class="switch switch-lg switch-label switch-primary ">
+                                                <input type="checkbox" v-model="is_completed" class="switch-input " checked>
+                                                <span class="switch-slider" data-checked="Yes" data-unchecked="No"></span>
                                             </label> 
                                         </div>
                                     </div>
@@ -467,10 +471,14 @@
                                                 <div class="form-group sw">
                                                     <label>BRS Questionnaire</label><br>
                                                     &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                                    <!-- <label class="switch switch-sm switch-3d switch-primary ">
+                                                        <input type="checkbox"   v-model="brs_q" class="switch-input form-control form-control-sm" checked>
+                                                        <span class="switch-slider"></span>
+            
+                                                    </label>  -->
                                                     <label class="switch switch-sm switch-3d switch-primary ">
                                                         <input type="checkbox"   v-model="brs_q" class="switch-input form-control form-control-sm" checked>
-                                                        <span class="switch-label"></span>
-                                                        <span class="switch-handle"></span>
+                                                        <span class="switch-slider"></span>
                                                     </label> 
                                                 </div>
                                         </div>
@@ -480,8 +488,8 @@
                                                     &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                                                     <label class="switch  switch-sm switch-3d switch-primary">
                                                         <input type="checkbox" v-model="urica_q" class="switch-input form-control form-control-sm" checked>
-                                                        <span class="switch-label"></span>
-                                                        <span class="switch-handle"></span>
+                                                        <span class="switch-slider"></span>
+            
                                                     </label> 
                                                 </div>
                                         </div>
@@ -491,8 +499,8 @@
                                                     &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                                                     <label class="switch switch-sm switch-3d switch-primary">
                                                         <input type="checkbox"  v-model="datc_q" class="switch-input form-control form-control-sm" checked>
-                                                        <span class="switch-label"></span>
-                                                        <span class="switch-handle"></span>
+                                                        <span class="switch-slider"></span>
+            
                                                     </label> 
                                                 </div>
                                         </div>
@@ -506,8 +514,8 @@
                                                     &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                                                     <label class="switch switch-sm switch-3d switch-primary">
                                                         <input type="checkbox"  v-model="spsi_q" class="switch-input form-control form-control-sm" checked>
-                                                        <span class="switch-label"></span>
-                                                        <span class="switch-handle"></span>
+                                                        <span class="switch-slider"></span>
+            
                                                     </label> 
                                                 </div>
                                         </div>
@@ -517,8 +525,8 @@
                                                     &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                                                     <label class="switch switch-sm switch-3d switch-primary">
                                                         <input type="checkbox"  v-model="mh_q" class="switch-input form-control form-control-sm" checked>
-                                                        <span class="switch-label"></span>
-                                                        <span class="switch-handle"></span>
+                                                        <span class="switch-slider"></span>
+            
                                                     </label> 
                                                 </div>
                                         </div>
@@ -528,8 +536,8 @@
                                                     &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                                                     <label class="switch switch-sm switch-3d switch-primary">
                                                         <input type="checkbox"  v-model="pf_q" class="switch-input form-control form-control-sm" checked>
-                                                        <span class="switch-label"></span>
-                                                        <span class="switch-handle"></span>
+                                                        <span class="switch-slider"></span>
+            
                                                     </label> 
                                                 </div>
                                         </div>
